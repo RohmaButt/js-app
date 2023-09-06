@@ -145,7 +145,7 @@ const data1 = [
   {
     name: 'Operating income',
     category: 'Operating income',
-    isMarkedAsZero: false,
+    isMarkedAsZero: true,
     subCategory: [
       { name: '2018', category: '2018', val: 24.7, subCategory: null },
       { name: '2019', category: '2019', val: 23.9, subCategory: null },
