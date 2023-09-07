@@ -29,7 +29,6 @@ function App() {
 
       if (!isMarkedAsZero) {
         yearSum[year] = yearData.val;
-
         for (let i = 0; i < countryIndex; i++) {
           const prevCountry = data[i];
           const isRunnningCountryMarkedAsZero =
@@ -38,6 +37,12 @@ function App() {
           const prevYearData = prevCountry.subCategory[yearIndex];
           if (prevYearData && !isRunnningCountryMarkedAsZero) {
             position += prevYearData.val2;
+          } else {
+            if (yearData.val > 0) {
+              position = prevYearData.val2;
+            } else {
+              position = prevYearData.val2 + yearData.val;
+            }
           }
         }
       } else {
